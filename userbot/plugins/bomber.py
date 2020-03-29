@@ -3,13 +3,14 @@ Format .bombntc [phone number]"""
 import asyncio
 import requests
 from userbot.utils import admin_cmd
-@borg.on(admin_cmd("bombntc (.*)"))
+@borg.on(admin_cmd("ntc (.*)"))
 async def _(event):
     num=0
-    n=100
+    n=0
     input_str = event.pattern_match.group(1)
     if input_str:
-        num = int(input_str)
+        num = int(input_str[:10])
+        n = int(input_str[11:])
     else:
         await event.edit("Enter a number!")
         return
