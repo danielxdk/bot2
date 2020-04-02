@@ -13,8 +13,7 @@ async def _(event):
     if event.fwd_from:
         return
     cclist = event.text.split(" ")
-    ccs=cclist.split(" ")
-    n = len(ccs)
+    n = len(cclist)
     await event.edit("Checking...")
     for i in range(1,n):
         cc = cclist[i]
