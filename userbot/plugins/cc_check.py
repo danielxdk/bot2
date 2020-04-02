@@ -24,6 +24,7 @@ async def _(event):
         card = f"Card: "+ "`{r['card']}`\n"
         rem_req = f"Remaining requests: {r['requests_remaining']}\n"
         result = code+status+card+rem_req
+        final_result=""
         final_result = final_result+result
         await event.edit(final_result)
     await event.edit(final_result+"DONE CHECKING!!!")
