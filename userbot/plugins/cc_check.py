@@ -1,4 +1,4 @@
-""" CC checker userbot plugin coded by @scifidemon """
+""" CC checker userbot plugin coded by @scifidemon and API by @Dr34m_C4t """
 from telethon import events, errors, functions, types
 import inspect
 import traceback
