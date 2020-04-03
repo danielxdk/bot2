@@ -16,7 +16,7 @@ async def _(event):
         return
     got = got.split(";")
     query = got[0]
-    selector = got[1]
+    selector = int(got[1])
     query = quote_plus(query)
     URL = (f"https://1337x.to/search/{query}/1/")
     page_src = get(URL, headers={"user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36"})
