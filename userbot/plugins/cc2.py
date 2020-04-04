@@ -4,7 +4,7 @@ import asyncio
 from requests import get
 from bs4 import BeautifulSoup
 
-@command(pattern="^.ccheck")
+@command(pattern="^.techrimcc")
 async def _(event):
     if event.fwd_from:
         return
