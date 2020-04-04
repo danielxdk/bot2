@@ -23,11 +23,12 @@ async def _(event):
         code = f"Code: {r['code']}\n"
         status = f"Status: {r['status']}\n"
         card = "Card: "+ f"`{r['card']}`\n"
-        rem_req = f"Remaining requests: {r['requests_remaining']}\n"
+        rem_req = f"Remaining requests: {r['requests_remaining']}\n\n"
         result = code+status+card+rem_req
         final_result = final_result+result
+        final_num = i
         await event.edit(final_result+"Checking more...")
-    await event.edit(final_result+"DONE CHECKING!!!")
+    await event.edit(final_result+f"{final_num} CCs Checked!\nCC checker API by @Dr34m_C4t\nCC checker UserBot plugin by @scifidemon\n")
         
 
 
