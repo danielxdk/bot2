@@ -19,7 +19,7 @@ async def _(event):
         soup = BeautifulSoup(r.text,"html.parser")
         all_stats = soup.find_all("span")
         status = f"Status: {all_stats[0].text}\n"
-        card = "Card: "+ f"`{all_stats[1].text}`\n"
+        card = "Card: "+ f"`{all_stats[1].text}`"+"\n"
         bin_details = f"BIN Details: {all_stats[2].text}\n"
         cvv_status = f"CC Status: {all_stats[4].text}\n"
         badge = "ᏆhᎬ ᏆᎬᏟhᏒᎥm\n\n"
