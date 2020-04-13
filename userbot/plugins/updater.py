@@ -45,15 +45,15 @@ IS_SELECTED_DIFFERENT_BRANCH = (
     "please check out to an official branch, and re-start the updater."
 )
 OFFICIAL_UPSTREAM_REPO = "https://github.com/scifidemon/Kanged_Userbot"
-BOT_IS_UP_TO_DATE = "`The userbot is up-to-date.\nThank you for Using this Service.`"
+BOT_IS_UP_TO_DATE = "`The userbot is up-to-date.\nThank you for Using my service.`"
 NEW_BOT_UP_DATE_FOUND = (
-    "new update found for {branch_name}\n"
-    "changelog: \n\n{changelog}\n"
-    "updating ..."
+    "New Update Found For {branch_name}\n"
+    "\n\n{changelog}\n"
+    "Hold On Master...Updating ..."
 )
 NEW_UP_DATE_FOUND = (
-    "New update found for {branch_name}\n"
-    "`updating ...`"
+    "New Update Found For {branch_name}\n"
+    "`Hold On Master...Updating`"
 )
 REPO_REMOTE_NAME = "temponame"
 IFFUCI_ACTIVE_BRANCH_NAME = "master"
@@ -168,9 +168,8 @@ def generate_change_log(git_repo, diff_marker):
 
 async def deploy_start(tgbot, message, refspec, remote):
     await message.edit(RESTARTING_APP)
-    await message.edit("Updating and Deploying New Branch. Please wait for 5 minutes then use `.alive` to check if i'm working or not.")
+    await message.edit("Updating this bot. Please be patient :)")
     await remote.push(refspec=refspec)
     await tgbot.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
 
-    
