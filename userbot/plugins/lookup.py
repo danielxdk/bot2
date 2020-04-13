@@ -1,7 +1,7 @@
 from requests import get
 from userbot.utils import admin_cmd
 import json
-@borg.on(admin_cmd("lookup (.*)"))
+@borg.on(admin_cmd("bin (.*)"))
 async def _(event):
     input_str = event.pattern_match.group(1)
     if input_str:
