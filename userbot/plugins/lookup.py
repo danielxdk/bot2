@@ -13,12 +13,12 @@ async def _(event):
     await event.edit("Looking Up the BIN...")
     try:
         data = get(URL).json()
-        name = data["bank"]["name"]
-        scheme = data["scheme"]
-        typ = data["type"]
-        brand = data["brand"]
-        country = data["country"]["name"]
+        name = data.get("bank",{}).get("name"," ")
+        scheme = data.get("scheme"," ")
+        typ = data.get("type"," ")
+        brand = data.get("brand"," ")
+        country = data.get("country",{}).get("name"," ")
         await event.edit(f"BIN: {BIN}\nName: {name}\nScheme: {scheme}\nType: {typ}\nBrand: {brand}\nCountry: {country}")
     except:
-        await event.edit("Invalid BIN")
+        await event.edit(f"{BIN} is Invalid BIN")
     
