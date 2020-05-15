@@ -14,4 +14,4 @@ async def amireallyalive(alive):
     await alive.edit("Corona hasn't killed me yet.\n\n"
                      "`Telethon version: 6.9.0\nPython: 3.7.3`\n"
                      "`Database Status: Databases functioning normally!(unless you run out of dynos)`\n"
-                     f"`This nibba kanged me: {DEFAULTUSER}`\n")
+                     f"`This nibba my boss: {DEFAULTUSER}`\n")
