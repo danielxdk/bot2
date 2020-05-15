@@ -34,7 +34,7 @@ from userbot.utils import register, errors_handler, admin_cmd
 PP_TOO_SMOL = "`The image is too small`"
 PP_ERROR = "`Failure while processing the image`"
 NO_ADMIN = "`I am not an admin nub nibba!"
-NO_PERM = "`I don't have sufficient permissions, gimme admeme`"
+NO_PERM = "`I don't have sufficient permissions, gimme admeme pls`"
 NO_SQL = "`Running on Non-SQL mode!`"
 
 CHAT_PP_CHANGED = "`Chat Picture Changed`"
@@ -410,10 +410,10 @@ async def gspider(gspdr):
         return
 
     # If pass, inform and start gmuting
-    await gspdr.edit("`Grabs a huge, sticky duct tape!`")
+    await gspdr.edit("`Yuss, taped yur mouth!`")
     if gmute(user.id) is False:
         await gspdr.edit(
-            '`Error! User probably already gmuted.\nRe-rolls the tape.`')
+            '`Error! User probably already gmuted this bitch.\nRe-rolls the tape.`')
     else:
         if reason:
             await gspdr.edit(f"`Globally taped!`Reason: {reason}")
@@ -472,7 +472,7 @@ async def rm_deletedacc(show):
                 await show.client(
                     EditBannedRequest(show.chat_id, user.id, BANNED_RIGHTS))
             except ChatAdminRequiredError:
-                await show.edit("`I don't have ban rights in this group`")
+                await show.edit("`I don't have ban rights .. puk you`")
                 return
             except UserAdminInvalidError:
                 del_u -= 1
