@@ -3,7 +3,7 @@
 Join https://t.me/XtraTgBot for updates and tuts
 ### The Easy Way
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy/uNique-Shrestha/bot2)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 **Not All of the variables are mandatory**
 
